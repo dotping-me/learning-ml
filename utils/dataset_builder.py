@@ -1,11 +1,11 @@
 from typing import Any, List, Dict, Union
 
-from os import path, getcwd
+from os import path
 from pandas import DataFrame
 
 import dotenv, requests
 
-DIR_PATH = getcwd()
+DIR_PATH = path.dirname(path.abspath(__file__))
 DOTENV_PATH = path.join(DIR_PATH, "../.env")
 
 KEY = dotenv.get_key(DOTENV_PATH, "API_KEY")
